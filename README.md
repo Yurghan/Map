@@ -1,10 +1,22 @@
 # Map APP
 
-January 2021
+January 2022
 
 Project status: FINISHED --- RWD not added
 
-Preview: info-countries-milos.netlify.app
+Preview: milostravel.netlify.app
+
+Website uses Leaflet API - OpenStreetMap.
+
+
+## How to use
+1. Click on the map
+2. Choose type of travel
+3. Set time and cost/income 
+4. Save with the button or Enter Key
+5. Add few more travels
+6. Click on one of them and obseve how the map adjusts
+7. Reload the site to notice that data was saved in Local Memory
 
 ## Technologies
 
