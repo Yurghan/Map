@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Dołączenie mapy -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="script.js"></script>
+
+    <title>MilosTravel</title>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="top">
+        <img src="img/logo.png" alt="Logo" class="top__logo" />
+        <h2 class="top__name">MilosTravel</h2>
+      </div>
+
+      <ul class="travels">
+        <form class="form hidden">
+          <div class="form__row">
+            <label class="form__label">Type</label>
+            <select class="form__input form__input--type">
+              <option value="tourist">Tourist Journey</option>
+              <option value="work">Work Trip</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Time</label>
+            <input
+              class="form__input form__input--time"
+              placeholder="in days"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Cost</label>
+            <input
+              class="form__input form__input--cost"
+              placeholder="in US $"
+            />
+          </div>
+          <div class="form__row form__row--hidden">
+            <label class="form__label">Income</label>
+            <input
+              class="form__input form__input--income"
+              placeholder="in US $"
+            />
+          </div>
+
+          <button class="form__btn">SAVE</button>
+        </form>
+      </ul>
+    </div>
+
+    <div id="map"></div>
+  </body>
+</html>

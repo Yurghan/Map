@@ -1,0 +1,151 @@
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  display: flex;
+  height: 100vh;
+  padding: 2.5rem;
+  background-color: #fff;
+  color: #ececec;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  overscroll-behavior-y: none; }
+
+a:link,
+a:visited {
+  color: #7c32f1; }
+
+/* SIDEBAR */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50rem;
+  padding: 3rem 5rem 4rem 5rem;
+  background-color: #2d3439; }
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem; }
+  .top__logo {
+    height: 5.2rem;
+    margin-right: 2rem; }
+  .top__name {
+    font-size: 2.4rem; }
+
+.travels {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 77vh;
+  list-style: none; }
+  .travels::-webkit-scrollbar {
+    width: 0; }
+
+.travel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+  padding: 1.5rem 2.25rem;
+  border-radius: 5px;
+  margin-bottom: 1.75rem;
+  background-color: #42484d;
+  cursor: pointer; }
+  .travel--tourist {
+    border-left: 5px solid #c40031; }
+  .travel--work {
+    border-left: 5px solid #7c32f1; }
+  .travel__title {
+    grid-column: 1 / -1;
+    font-size: 1.7rem;
+    font-weight: 600; }
+  .travel__details {
+    display: flex;
+    align-items: baseline; }
+  .travel__icon {
+    height: 0.28rem;
+    margin-right: 0.2rem;
+    font-size: 1.8rem; }
+  .travel__value {
+    margin-right: 0.5rem;
+    font-size: 1.5rem; }
+  .travel__unit {
+    color: #aaa;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 800; }
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2.5rem;
+  height: 9.25rem;
+  padding: 1.5rem 2.75rem;
+  border-radius: 5px;
+  margin-bottom: 1.75rem;
+  background-color: #42484d;
+  transition: all 0.5s, transform 1ms; }
+  .form.hidden {
+    height: 0;
+    padding: 0 2.25rem;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(-30rem); }
+  .form__row {
+    display: flex;
+    align-items: center; }
+    .form__row--hidden {
+      display: none; }
+  .form__label {
+    flex: 0 0 50%;
+    font-size: 1.5rem;
+    font-weight: 600; }
+  .form__input {
+    width: 100%;
+    padding: 0.3rem 1.1rem;
+    border: none;
+    border-radius: 3px;
+    background-color: #ececec;
+    font-family: inherit;
+    font-size: 1.4rem;
+    transition: all 0.2s; }
+    .form__input:focus {
+      outline: none;
+      background-color: #fff; }
+  .form__btn {
+    background-color: #7c32f1;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 900;
+    cursor: pointer; }
+
+/* MAP */
+#map {
+  flex: 1;
+  height: 100%;
+  background-color: #aaa; }
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: #2d3439;
+  color: #ececec;
+  border-radius: 5px;
+  padding-right: 0.6rem; }
+
+.leaflet-popup .leaflet-popup-content {
+  font-size: 1.5rem; }
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: #2d3439; }
+
+.tourist-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid #c40031; }
+
+.work-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid #7c32f1; }
